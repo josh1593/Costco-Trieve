@@ -1,0 +1,73 @@
+.header-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(66,234,247,1) 0%, rgba(0,255,151,1) 100%);
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .header-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 2rem;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0060A9;
+    background: #EEEEEE;
+  }
+  
+  .header-link {
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  
+  .header-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background: #EEEEEE;
+    gap: 15px;
+    padding: 1rem 0.5rem;
+  }
+  
+  .logo-container {
+    width: 20%;
+    cursor: pointer;
+  }
+  
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    align-items: center;
+    color: #0060A9;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .icon-container {
+    text-align: center;
+  }
+  
+  .icon {
+    width: 20%;
+    margin: auto;
+  }
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 0.4fr 2fr 1fr;
+    padding: 1.25rem;
+    gap: 1.75rem;
+    align-items: center;
+    background: #EEEEEE;
+  }
+  
+  .main-logo {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
