@@ -2,7 +2,7 @@ import React from 'react';
 
 const ImageBanner = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px', maxHeight:'512px' }}>
       <div style={{ width: '100%', position: 'relative' }}>
         <div style={{
           backgroundColor: '#ea854e',
@@ -21,8 +21,22 @@ const ImageBanner = () => {
         <img
           src="https://mobilecontent.costco.com/live/resource/img/24w10010/d_24w10010_july_mvm_cover_v2.jpg"
           alt="July MVM Cover"
-          style={{ width: '100%', height: 'auto', borderBottomLeftRadius: '12px', borderBottomRightRadius: '12px' }}
+          style={{ width: '100%' , margin:'0', display: 'block'}}
         />
+        <div style={{
+          backgroundColor: '#53b2a4',
+          color: 'black',
+          padding: '11px 20px',
+          borderBottomLeftRadius: '12px',
+          borderBottomRightRadius: '12px',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          width: '100%',
+          boxSizing: 'border-box',
+          fontSize: '12px'
+        }}>
+          VALID 6/19/24 - 7/21/24 | WHILE SUPPLIES LAST
+        </div>
       </div>
     </div>
   );
