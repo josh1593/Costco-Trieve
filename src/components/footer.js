@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div style={{ marginTop: "5rem" }}>
+    <div style={{ marginTop: "5rem", minHeight: "100vh", position: "relative" }}>
       <div
         style={{
+          position: "absolute",
+          bottom: 0,
+          width: "100%",
           padding: "6px 20px 16px 20px",
           paddingBottom: "5px",
           backgroundColor: "#EEEEEE",
