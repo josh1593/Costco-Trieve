@@ -134,7 +134,6 @@ const Header = () => {
           ))}
         </div>
       </div>
-
       <div
         style={{
           boxShadow: 'base',
@@ -144,12 +143,44 @@ const Header = () => {
           display: 'flex',
         }}
       ></div>
-
+      
       <div style={{ display: 'flex', backgroundColor: '#fafafa', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)' }}>
         <div style={{ gap: ['2', '2', '4', '10'], display: 'flex', paddingBottom: '1rem' }}>
-          {/* Rest of the component */}
+        <div>
+      <div style={{ fontSize: '13px', fontWeight: 400, paddingBottom: '0.2rem', paddingTop: '0.3rem' }}>My Warehouse</div>
+      <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '0.2rem' }}>
+        <div style={{ width: '4', marginLeft: '2rem' }}>
+          <FaMapMarkedAlt />
+        </div>
+        <div style={{ fontWeight: 600, marginLeft: '0.8rem' }}>Bothell</div>
+      </div>
+      <div style={{ fontSize: '12px', fontWeight: 400, color: 'green', marginLeft: '2rem' }}>Open: Until 8:30 pm</div>
+    </div>
+
+    <div style={{ paddingLeft: '3rem' }}>
+      <div style={{ fontSize: '13px', fontWeight: 400, paddingBottom: '0.2rem', paddingTop: '0.3rem' }}>Delivery Location</div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ width: '4' }}>
+              <PiPackageThin />
+            </div>
+            <div style={{ fontWeight: 600 }}>98011</div>
+          </div>
         </div>
       </div>
+
+      <div
+        style={{
+          color: '#0073A6',
+          cursor: 'pointer',
+          display: ['none', 'none', 'block', 'block'],
+          paddingTop: '1rem',
+          paddingRight: '1rem',
+          marginLeft: 'auto'
+        }}
+      >
+        Lists/ Buy Again
+      </div>
+    </div>
     </div>
   );
 };
