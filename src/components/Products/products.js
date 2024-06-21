@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ProductCard from './productCard';
 import './product.css';
 
-
-// Access API key in your code
-
 const Products = ({ searchTerm }) => {
   const [products, setProducts] = useState([]);
 
@@ -17,9 +14,9 @@ const Products = ({ searchTerm }) => {
           const response = await fetch('https://api.trieve.ai/api/chunk/search', {
             method: 'POST',
             headers: {
-              'Authorization': 'tr-2DFX9IlzSlnHjaTbADtZFGBr1yuBjPVf',
+              'Authorization': process.env.REACT_APP_API_KEY,
               'Content-Type': 'application/json',
-              'TR-Dataset': 'eea737b8-107e-459b-8652-4983d852d17b'
+              'TR-Dataset': process.env.REACT_APP_TR_DATASET
             },
             body: JSON.stringify({ query: searchTerm, search_type: "semantic" })
           });
