@@ -3,14 +3,19 @@ import { FaSearch } from 'react-icons/fa';
 
 const Header = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [groupSearch, setGroupSearch] = useState(false);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
+  const handleGroupSearchChange = (e) => {
+    setGroupSearch(e.target.checked);
+  };
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    onSearch(searchTerm);
+    onSearch(searchTerm, groupSearch);
   };
 
   const navigationLinks = [
@@ -83,7 +88,7 @@ const Header = ({ onSearch }) => {
                 cursor: 'pointer',
                 height: '42px',
                 width: '40px',
-                backgroundColor: '#333', // Add this line to make the background color darker
+                backgroundColor: '#333',
               }}
             >
               <FaSearch
@@ -93,7 +98,16 @@ const Header = ({ onSearch }) => {
                 }}
               />
             </button>
-
+            <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }}>
+              <input 
+                type="checkbox" 
+                id="group-search" 
+                checked={groupSearch} 
+                onChange={handleGroupSearchChange} 
+                style={{ marginRight: '5px' }} 
+              />
+              <label htmlFor="group-search" style={{ color: '#0060A9' }}>Group Search</label>
+            </div>
           </form>
         </div>
       </div>
