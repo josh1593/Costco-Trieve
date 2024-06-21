@@ -88,7 +88,7 @@ const Header = ({ onSearch }) => {
               <FaSearch
                 style={{
                   transform: 'rotate(90deg)',
-                  color: '#0060A9',
+                  color: '#ffffff',
                 }}
               />
             </button>
