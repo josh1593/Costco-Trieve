@@ -1,17 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/header';
-import Footer from './components/footer';
-import SlideItems from './components/slideItems';
-import ImageBanner from './components/imageBanner';
-function App() {
+import React, { useState } from 'react';
+import Header from './components/Header/header';
+import Products from './components/Products/products';
+
+
+const App = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = async (term) => {
+    setSearchTerm(term);
+  };
+
   return (
-    <div className="App">
-      <Header />
-      <ImageBanner />
-      <Footer />
+    <div>
+      <Header onSearch={handleSearch} />
+      <Products searchTerm={searchTerm} />
     </div>
   );
-}
+};
 
 export default App;
