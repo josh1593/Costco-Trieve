@@ -83,6 +83,7 @@ const Header = ({ onSearch }) => {
                 cursor: 'pointer',
                 height: '42px',
                 width: '40px',
+                backgroundColor: '#333', // Add this line to make the background color darker
               }}
             >
               <FaSearch
@@ -92,6 +93,7 @@ const Header = ({ onSearch }) => {
                 }}
               />
             </button>
+
           </form>
         </div>
       </div>
