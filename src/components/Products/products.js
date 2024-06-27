@@ -3,7 +3,7 @@ import ProductCard from './productCard';
 import './product.css';
 import Spinner from '../spinner';
 
-const Products = ({ searchTerm, groupSearch }) => {
+const Products = ({ searchTerm, groupSearch, searchType }) => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,12 +16,12 @@ const Products = ({ searchTerm, groupSearch }) => {
         headers: {
           'Authorization': process.env.REACT_APP_API_KEY,
           'Content-Type': 'application/json',
-          'TR-Dataset': process.env.REACT_APP_TR_GROUP_DATASET
+          'TR-Dataset': process.env.REACT_APP_TR_DATASET
         },
-        body: JSON.stringify({ query: searchTerm, search_type: "semantic" })
+        body: JSON.stringify({ query: searchTerm, search_type: searchType })
       });
       const data = await response.json();
-
+      console.log(data)
       const groupedProducts = {};
       data.group_chunks.forEach(chunk => {
         const trackingId = chunk.group_tracking_id;
@@ -53,7 +53,7 @@ const Products = ({ searchTerm, groupSearch }) => {
           'Content-Type': 'application/json',
           'TR-Dataset': process.env.REACT_APP_TR_DATASET
         },
-        body: JSON.stringify({ query: searchTerm, search_type: "semantic" })
+        body: JSON.stringify({ query: searchTerm, search_type: searchType })
       });
       const data = await response.json();
       setProducts(data.score_chunks.map(chunk => chunk.metadata[0].metadata));
@@ -74,7 +74,7 @@ const Products = ({ searchTerm, groupSearch }) => {
         fetchProducts();
       }
     }
-  }, [searchTerm, groupSearch]);
+  }, [searchTerm, groupSearch, searchType]);
 
   return (
     <div className="container">
